@@ -1,0 +1,18 @@
+body {
+    background-color: #9aceeb;
+    max-width: 1500px;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+h1, p, footer, ul {
+    color: #09294a;
+    font-family: Arial, sans-serif;
+}
+.info {
+    background-color: #fafafa;
+    color: black;
+}
+.block {
+    text-align: center;
+    font-size: 120%;
+}
