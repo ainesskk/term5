@@ -1,12 +1,12 @@
 body {
     background-color: #9aceeb;
-    max-width: 1500px;
+    max-width: 1900px;
     margin-left: 200px;
     margin-top: 50px;
 }
-h1, p, footer, ul {
+h1, p {
     color: #09294a;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
 }
 .info {
     background-color: #fafafa;
@@ -15,4 +15,9 @@ h1, p, footer, ul {
 .block {
     text-align: center;
     font-size: 120%;
+}
+ul {
+    font-size: 120%;
+    color: #09294a;
+    font-family: Verdana;
 }
