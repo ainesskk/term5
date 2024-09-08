@@ -1,10 +1,10 @@
 body {
     background-color: #9aceeb;
-    max-width: 1900px;
+    width: 1500px;
     margin-left: 200px;
     margin-top: 50px;
 }
-h1, h2, h3, p {
+h1, h2, h3, p, span , td {
     color: #09294a;
     font-family: Arial;
 }
@@ -16,7 +16,7 @@ h1, h2, h3, p {
     text-align: center;
     font-size: 120%;
 }
-ul, ol {
+.navig, ul, ol {
     font-size: 120%;
     color: #09294a;
     font-family: Verdana;
