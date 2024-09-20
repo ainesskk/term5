@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <meta charset="UTF-8">
+    <title>Персональный сайт Крюковой Ксении. Тест по основам дискретной математики.</title>
+</head>
+<body>
+    <header>
+        <h1>Тест по основам дискретной математики</h1>
+    </header>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="mainpage.html">Главная страница</a></li>
+                <li><a href="aboutme.html">Обо мне</a></li>
+                <li><a href="myinterests.html">Мои интересы</a></li>
+                <li><a href="study.html">Учёба</a></li>
+                <li><a href="album.html">Фотоальбом</a></li>
+                <li><a href="contact.html">Контакт</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div  class="form" style="width: 1000px; margin-top: 50px;">
+        <form method="post" action="mailto:ksenia_krr@mail.ru" enctype="text/plain"  style="margin-left: 50px; margin-right: 50px;">
+            <label>Фамилия Имя Отчество:</label>
+            <input type="text" name="fio" class="field" required><br><br>
+            <label>Группа:</label>
+            <select name="group" class="field">
+                <option value="">Выберите группу</option>
+                <optgroup label="1 курс">
+                    <option value="24-1">ИТ/б-24-01
+                    <option value="24-2">ИТ/б-24-02
+                    <option value="24-3">ИТ/б-24-03
+                    <option value="24-4">ИТ/б-24-04
+                </optgroup>
+                <optgroup label="2 курс">
+                    <option value="23-1">ИТ/б-23-01
+                    <option value="23-2">ИТ/б-23-02
+                    <option value="23-3">ИТ/б-23-03
+                    <option value="23-4">ИТ/б-23-04
+                </optgroup>
+                <optgroup label="3 курс">
+                    <option value="22-1">ИТ/б-22-01
+                    <option value="22-2">ИТ/б-22-02
+                    <option value="22-3">ИТ/б-22-03
+                    <option value="22-4">ИТ/б-22-04
+                </optgroup>
+                <optgroup label="4 курс">
+                    <option value="21-1">ИТ/б-21-01
+                    <option value="21-2">ИТ/б-21-02
+                    <option value="21-3">ИТ/б-21-03
+                    <option value="21-4">ИТ/б-21-04
+                </optgroup>
+            </select><br><br>
+            <h3>Вопросы по дисциплине</h3>
+            <br>
+            <label>1. Какое из следующих утверждений является истинным для множества (A) и множества (B)?</label><br><br>
+            <input type="radio" name="question 1" value="1" required>
+            <label>(A) объединение (B) содержит все элементы из (A) и (B)</label><br>
+            <input type="radio" name="question 1" value="2" required>
+            <label>(A) пересечение (B) содержит все элементы из (A) и (B)</label><br>
+            <input type="radio" name="question 1" value="3" required>
+            <label>(A) объединение (B) содержит все элементы из (A) и (B)</label><br>
+            <input type="radio" name="question 1" value="4" required>
+            <label>(B) разность (A) содержит все элементы из (A)</label><br><br>
+            <div style="text-align: justify;">
+                <label >2. Какому закону соотвествует формулировка: "если в выражении используется только операция дизъюнкции или 
+                    только операция конъюнкции, то можно пренебрегать скобками или произвольно их расставлять"?</label>
+            </div><br>
+            <select name="question 2" class="field">
+                <option value="">Выберите вариант</option>
+                <option value="1">Закон де Моргана</option>
+                <option value="2">Закон дистрибутивности</option>
+                <option value="3">Закон ассоциативности</option>
+                <option value="4">Закон рефлексивности</option>
+                <option value="5">Закон коммутативности</option>
+            </select>
+            <br><br>
+            <div style="text-align: justify;">
+            <label>3. Вставьте слово: ... множеств A и B называется множество, состоящее из всех элементов, которые одновременно 
+                принадлежат и A, и B.</label>
+            </div><br>
+            <textarea name="question 3" rows="1" cols="40" class="field" required></textarea><br><br>
+            
+            <button class="but" type="submit">Отправить</button>
+            <button class="but" type="reset">Очистить форму</button>
+        </form>
+    </div>
+</body>
+</html>

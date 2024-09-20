@@ -1,0 +1,41 @@
+create table Типы_растений (
+  id_типа int primary key,
+  название varchar,
+  описание text
+);
+
+create table Семейства (
+  id_семейства int primary key,
+  название varchar,
+  особенности text
+);
+
+create table Растения (
+  	id_растения int primary key,
+	id_типа int not null,
+  	id_семейства int not null,
+  	название varchar,
+  	стоимость int,
+  	место_происхождения varchar,
+  	constraint fk_растения_типы foreign key (id_типа) references Типы_растений(id_типа) on delete cascade on update cascade,
+  	constraint fk_растения_семейства foreign key (id_семейства) references Семейства(id_семейства) on delete cascade on update cascade
+);
+
+create table Характеристики(
+  id_характеристики int not null,
+  id_растения int not null,
+  особенность varchar,
+  значение text,
+  primary key (id_характеристики, id_растения),
+  constraint fk_характ_растения foreign key (id_растения) references Растения(id_растения) on delete cascade on update cascade
+);
+
+create table Уход (
+  id_ухода int not null,
+  id_растения int not null,
+  дата date,
+  операция varchar,
+  комментарий text,
+  primary key (id_ухода, id_растения),
+  constraint fk_растения_уход foreign key (id_растения) references Растения(id_растения) on delete cascade on update cascade
+);

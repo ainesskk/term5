@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <meta charset="UTF-8">
+    <title>Персональный сайт Крюковой Ксении. Контакты.</title>
+</head>
+<body>
+    <header>
+        <h1>Контакты</h1>
+    </header>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="mainpage.html">Главная страница</a></li>
+                <li><a href="aboutme.html">Обо мне</a></li>
+                <li><a href="myinterests.html">Мои интересы</a></li>
+                <li><a href="study.html">Учёба</a></li>
+                <li><a href="album.html">Фотоальбом</a></li>
+                <li><a href="test.html">Тест</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="form">
+        <form method="post" action="mailto:ksenia_krr@mail.ru" enctype="text/plain" style="padding-left: 80px;">
+            <label>Фамилия Имя Отчество:</label>
+            <input type="text" name="fio" class="field" required><br><br>
+            <label>Пол:</label>
+            <input type="radio" name="gender" value="man" required>
+            <label>Мужской</label>
+            <input type="radio" name="gender" value="woman" required>
+            <label>Женский</label><br><br>
+            <label>Возраст:</label>
+            <select class="field" name="age" required>
+                <option value="">Выберите возраст</option>
+                <option value="0-15">0-15</option>
+                <option value="16-30">16-30</option>
+                <option value="31-45">31-45</option>
+                <option value="46-60">46-60</option>
+                <option value="60-...">60-...</option>
+            </select><br><br>
+            <label>E-mail:</label>
+            <input type="email" name="email" class="field" required><br><br>
+            <label>Сообщение:</label><br>
+            <textarea name="message" rows="4" cols="50" class="field" required></textarea><br><br>
+            <button class="but" type="submit">Отправить</button>
+            <button class="but" type="reset">Очистить форму</button>
+        </form>
+    </div>
+</body>
+</html>
