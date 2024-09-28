@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <meta charset="UTF-8">
     <title>Персональный сайт Крюковой Ксении. Контакты.</title>
+    <script src="contact.js"></script>
 </head>
 <body>
     <header>
@@ -22,27 +23,32 @@
         </nav>
     </div>
     <div class="form">
-        <form method="post" action="mailto:ksenia_krr@mail.ru" enctype="text/plain" style="padding-left: 80px;">
-            <label>Фамилия Имя Отчество:</label>
-            <input type="text" name="fio" class="field" required><br><br>
-            <label>Пол:</label>
-            <input type="radio" name="gender" value="man" required>
-            <label>Мужской</label>
-            <input type="radio" name="gender" value="woman" required>
+        <form method="post" action="mailto:ksenia_krr@mail.ru" name="myForm" enctype="text/plain" onsubmit="return checkInput()" style="padding-left: 80px;">
+            <label>Фамилия Имя Отчество:
+                <input type="text" name="fio" class="field"><br><br></label>
+            <label>Пол:
+                <input type="radio" name="gender" value="man"></label>
+            <label>Мужской
+                <input type="radio" name="gender" value="woman"></label>
             <label>Женский</label><br><br>
-            <label>Возраст:</label>
-            <select class="field" name="age" required>
-                <option value="">Выберите возраст</option>
-                <option value="0-15">0-15</option>
-                <option value="16-30">16-30</option>
-                <option value="31-45">31-45</option>
-                <option value="46-60">46-60</option>
-                <option value="60-...">60-...</option>
-            </select><br><br>
-            <label>E-mail:</label>
-            <input type="email" name="email" class="field" required><br><br>
-            <label>Сообщение:</label><br>
-            <textarea name="message" rows="4" cols="50" class="field" required></textarea><br><br>
+            <label>Возраст:
+                <select class="field" name="age">
+                    <option value="">Выберите возраст</option>
+                    <option value="0-15">0-15</option>
+                    <option value="16-30">16-30</option>
+                    <option value="31-45">31-45</option>
+                    <option value="46-60">46-60</option>
+                    <option value="60-...">60-...</option>
+                </select><br><br>
+            </label>
+            <label>E-mail:
+                <input type="email" name="email" class="field"><br><br>
+            </label>
+            <label>Телефон:
+                <input type="tel" name="phone" class="field"><br><br>
+            </label>
+            <label>Сообщение:
+                <textarea name="message" rows="4" cols="50" class="field"></textarea><br></label><br>
             <button class="but" type="submit">Отправить</button>
             <button class="but" type="reset">Очистить форму</button>
         </form>
