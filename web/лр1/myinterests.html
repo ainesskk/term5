@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <meta charset="UTF-8">
     <title>Персональный сайт Крюковой Ксении. Мои интересы.</title>
+    <script src="myinterests.js"></script>
     <style>
         .textbox{
             margin-top: 50px; 
@@ -61,24 +62,24 @@
     </header>
     <div>
         <nav>
-            <ul>
-                <li><a href="mainpage.html">Главная страница</a></li>
-                <li><a href="aboutme.html">Обо мне</a></li>
-                <li><a href="study.html">Учёба</a></li>
-                <li><a href="album.html">Фотоальбом</a></li>
-                <li><a href="contact.html">Контакт</a></li>
-                <li><a href="test.html">Тест</a></li>
-            </ul>
+            <script>
+                outputList("u", "mainpage.html","Мои интересы",
+                    "aboutme.html", "Обо мне",
+                    "study.html", "Учёба",
+                    "album.html", "Фотоальбом",
+                    "contact.html", "Контакт",
+                    "test.html", "Тест")
+            </script>
         </nav>
     </div>
     <div style="margin-top: 50px; margin-left: 50px;">
         <h2>Содержание страницы</h2>
-        <ol>
-            <li style="margin-left: 0;"><a href="#hobby">Мое хобби</a></li>
-            <li><a href="#books">Мои любимые книги</a></li>
-            <li><a href="#music">Моя любимая музыка</a></li>
-            <li><a href="#films">Мои любимые фильмы</a></li>
-        </ol>
+        <script>
+            outputList("o", "#hobby","Мое хобби",
+                "#books", "Мои любимые книги",
+                "#music", "Моя любимая музыка",
+                "#films", "Мои любимые фильмы")
+        </script>
     </div><br><br>
     <div class="textbox">
         <h3><a id="hobby">Мое хобби</a></h3>
