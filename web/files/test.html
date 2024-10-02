@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <meta charset="UTF-8">
     <title>Персональный сайт Крюковой Ксении. Тест по основам дискретной математики.</title>
+    <script src="test.js"></script>
+    <script src="contact.js"></script>
 </head>
 <body>
     <header>
@@ -22,10 +24,10 @@
         </nav>
     </div>
     <div  class="form" style="width: 1000px; margin-top: 50px;">
-        <form method="post" action="mailto:ksenia_krr@mail.ru" enctype="text/plain"  style="margin-left: 50px; margin-right: 50px;">
-            <label>Фамилия Имя Отчество:</label>
-            <input type="text" name="fio" class="field" required><br><br>
-            <label>Группа:</label>
+        <form method="post" action="mailto:ksenia_krr@mail.ru" name="testForm" onsubmit="return checkInputText()" enctype="text/plain"  style="margin-left: 50px; margin-right: 50px;">
+            <label>Фамилия Имя Отчество:
+                <input type="text" name="fio" class="field" ><br><br></label>
+            <label>Группа:
             <select name="group" class="field">
                 <option value="">Выберите группу</option>
                 <optgroup label="1 курс">
@@ -52,20 +54,20 @@
                     <option value="21-3">ИТ/б-21-03
                     <option value="21-4">ИТ/б-21-04
                 </optgroup>
-            </select><br><br>
+            </select><br><br></label>
             <h3>Вопросы по дисциплине</h3>
             <br>
             <label>1. Какое из следующих утверждений является истинным для множества (A) и множества (B)?</label><br><br>
-            <input type="radio" name="question 1" value="1" required>
+            <input type="radio" name="question 1" value="1" >
             <label>(A) объединение (B) содержит все элементы из (A) и (B)</label><br>
-            <input type="radio" name="question 1" value="2" required>
+            <input type="radio" name="question 1" value="2" >
             <label>(A) пересечение (B) содержит все элементы из (A) и (B)</label><br>
-            <input type="radio" name="question 1" value="3" required>
+            <input type="radio" name="question 1" value="3" >
             <label>(A) объединение (B) содержит все элементы из (A) и (B)</label><br>
-            <input type="radio" name="question 1" value="4" required>
+            <input type="radio" name="question 1" value="4" >
             <label>(B) разность (A) содержит все элементы из (A)</label><br><br>
             <div style="text-align: justify;">
-                <label >2. Какому закону соотвествует формулировка: "если в выражении используется только операция дизъюнкции или 
+                <label >2. Какому закону соответствует формулировка: "если в выражении используется только операция дизъюнкции или
                     только операция конъюнкции, то можно пренебрегать скобками или произвольно их расставлять"?</label>
             </div><br>
             <select name="question 2" class="field">
@@ -81,8 +83,8 @@
             <label>3. Вставьте слово: ... множеств A и B называется множество, состоящее из всех элементов, которые одновременно 
                 принадлежат и A, и B.</label>
             </div><br>
-            <textarea name="question 3" rows="1" cols="40" class="field" required></textarea><br><br>
-            
+            <textarea name="question 3" rows="4" cols="50" class="field" ></textarea><br><br>
+
             <button class="but" type="submit">Отправить</button>
             <button class="but" type="reset">Очистить форму</button>
         </form>
