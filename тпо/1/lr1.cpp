@@ -1,8 +1,3 @@
-/*
- Задача 1. Дана целочисленная прямоугольная матрица. Определить
-номер строки, в которой находится самая длинная серия нулевых элементов
- */
-
 #include <iostream>
 using namespace std;
 
@@ -19,12 +14,12 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            cout << "["<<i<<"]["<<j<<"] = ";
-            cin>>a[i][j];
+            cout << "[" << i << "][" << j << "] = ";
+            cin >> a[i][j];
         }
     }
 
-    cout<<cntStr(a, n, m);
+    cout << cntStr(a, n, m);
 
     for (int i = 0; i < n; i++)
         delete[] a[i];
@@ -32,11 +27,11 @@ int main() {
     return 0;
 }
 
-int cntStr(int **a, int n, int m){
-    int max = 0, maxCur = 0, maxTmp = 0, maxStr = 0;
-    for(int i = 0; i<n ; i++){
+int cntStr(int **a, int n, int m) {
+    int max = 0, maxCur = 0, maxTmp = 0, maxStr = -1;
+    for (int i = 0; i < n; i++) {
         maxTmp = 0;
-        for(int j = 0; j<m-1 ; j++){
+        for (int j = 0; j < m; j++) {
             if (a[i][j] == 0)
                 maxTmp++;
             else {
@@ -55,5 +50,6 @@ int cntStr(int **a, int n, int m){
         }
         maxCur = 0;
     }
-    return maxStr;
+    if (maxStr == -1) return 0;
+    return maxStr + 1;
 }
