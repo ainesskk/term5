@@ -1,15 +1,15 @@
 mvi h, 02H
 mvi l, 00H
 
-mvi m, 01H
+mvi m, F1H
 inr l
-mvi m, 01H
+mvi m, 0BH
 inr l
 mvi m, 01H
 inr l
 mvi m, 09H
 inr l
-mvi m, 01H
+mvi m, 0CH
 inr l
 mvi m, 02H
 inr l
@@ -22,7 +22,7 @@ inr l
 mvi m, 07H
 
 mvi h, 03H
-mvi b, 0AH
+mvi b, FFH
 mvi d, 00H
 count:
 	mvi h, 02H
@@ -40,7 +40,7 @@ mvi b, 00H
 mvi d, 00H  
 mvi l, 00H 
 mvi c, 00H
-mvi a, 0AH
+mvi a, FFH
 sort:
 	mvi a, 0AH
 	mvi h, 03H
@@ -72,7 +72,7 @@ sort_loop_out:
 mvi h, 04H
 mvi l, 03H 
 mvi b, 00H
-mvi e, 0AH
+mvi e, FFH
 sum:
 	mov a, b
 	add m
