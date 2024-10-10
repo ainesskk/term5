@@ -1,7 +1,7 @@
 mvi h, 02H
 mvi l, 00H
 
-mvi m, F1H
+mvi m, F0H
 inr l
 mvi m, 0BH
 inr l
@@ -13,7 +13,7 @@ mvi m, 0CH
 inr l
 mvi m, 02H
 inr l
-mvi m, 03H
+mvi m, E1H
 inr l
 mvi m, 02H
 inr l
@@ -24,6 +24,7 @@ mvi m, 07H
 mvi h, 03H
 mvi b, FFH
 mvi d, 00H
+mvi e, 0AH
 count:
 	mvi h, 02H
 	mov l, d
@@ -34,6 +35,7 @@ count:
 	inr d
 	inr m
 	dcr b
+	dcr e
 	jnz count
 
 mvi b, 00H  
