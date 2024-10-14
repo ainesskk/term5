@@ -1,33 +1,75 @@
 body {
     background-color: #8abad4;
+    margin: 0;
+}
+.main-body{
     width: 1500px;
     margin-left: 200px;
-    margin-top: 50px;
 }
 h1, h2, h3, p, span , td {
     color: #09294a;
     font-family: Arial;
 }
-nav {
+.nav-div{
     background-color: #a9e1ff;
-    border-radius: 20px;
-    width: 180px;
     padding: 20px;
 }
-ul {
+.list-img{
+    width: 20px;
+    display: inline-block;
+}
+.nav-div nav > ul {
+    display: flex;
+    justify-content: center;
     font-family: Verdana;
     font-size: 120%;
-    list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    width: 80%;
+    list-style: none;
 }
-li {
-    border-radius: 10px;
+.nav-div nav > ul li {
+    flex: 1;
+    text-align: center;
+    border-radius: 20px;
 }
 a{
     color: #09294a;
     text-decoration: none;
 }
+.submenu-par {
+    position: relative; /* Родительский элемент */
+}
+
+.submenu {
+    position: absolute; /* Подменю */
+    top: 100%; /* Расположение под родительским элементом */
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0;
+    transition: all 0.5s ease-in;
+    z-index: 1; /* Убедитесь, что подменю отображается поверх других элементов */
+}
+
+.submenu li {
+    background-color: #09294a;
+    border-radius: 20px;
+    list-style: none;
+    padding: 10px;
+    margin-top: 10px; /* Убедитесь, что элементы не перекрываются */
+}
+
+.submenu li a {
+    color: #a9e1ff;
+}
+
+.submenu-par:hover .submenu {
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+}
+
 footer{
     background-color: #a9e1ff;
     font-size: 120%;

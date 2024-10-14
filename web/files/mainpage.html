@@ -3,34 +3,48 @@
 <head>
     <link rel="stylesheet" href="style.css" type="text/css">
     <meta charset="UTF-8">
-    <title> Персональный сайт Крюковой Ксении. Главная страница. </title>    
+    <title> Персональный сайт Крюковой Ксении. Главная страница. </title>
+
 </head>
 <body>
-    <header>
-        <h1>Главная страница</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="aboutme.html">Обо мне</a></li>
-            <li><a href="myinterests.html">Мои интересы</a></li>
-            <li><a href="study.html">Учёба</a></li>
-            <li><a href="album.html">Фотоальбом</a></li>
-            <li><a href="contact.html">Контакт</a></li>
-            <li><a href="test.html">Тест</a></li>
-        </ul>
-    </nav> 
-    <div>
-        <div style="float: left; margin-left: 200px; margin-top: 100px; padding: 10px" class="info">
-            <p class="block">ФИО: <b>Крюкова Ксения Максимовна</b></p>
-            <p class="block">Группа: <b>ИС\б-22-1-о</b></p>
-        </div>
-        <div style="float: right;">
-            <img style="margin-right: 200px;" src="img/main.jpg" alt="это я">
-        </div>
-        <div style="clear: both;"></div>
+    <div class="nav-div">
+        <nav>
+            <ul>
+                <li class="list-option"><a href="aboutme.html">Обо мне</a></li>
+                <li id="submenu-item" class="submenu-par"><a href="myinterests.html">Мои интересы</a>
+                    <ul class="submenu">
+                        <li><a href="myinterests.html#hobby">Хобби</a></li>
+                        <li><a href="myinterests.html#books">Книги</a></li>
+                        <li><a href="myinterests.html#music">Музыка</a></li>
+                        <li><a href="myinterests.html#films">Фильмы</a></li>
+                    </ul>
+                </li>
+                <li class="list-option"><a href="study.html">Учёба</a></li>
+                <li class="list-option"><a href="album.html">Фотоальбом</a></li>
+                <li class="list-option"><a href="contact.html">Контакт</a></li>
+                <li class="list-option"><a href="test.html">Тест</a></li>
+            </ul>
+        </nav>
     </div>
+    <div class="main-body">
+        <header style="margin-top: 50px">
+            <h1>Главная страница</h1>
+        </header>
+        <div style="margin-top: 100px">
+            <div style="float: left; margin-left: 200px; margin-top: 100px; padding: 10px" class="info">
+                <p class="block">ФИО: <b>Крюкова Ксения Максимовна</b></p>
+                <p class="block">Группа: <b>ИС\б-22-1-о</b></p>
+            </div>
+            <div style="float: right;">
+                <img style="margin-right: 200px; width: 100%" src="img/main.jpg" alt="это я">
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+
     <footer>
         <p>ЛР №1 <strong>«Исследование возможностей языка разметки гипертекстов HTML и каскадных таблиц стилей CSS»</strong></p>
     </footer>
+    <script src="listUpdater.js"></script>
 </body>
 </html>
