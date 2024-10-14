@@ -7,50 +7,66 @@
     <script src="contact.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Контакты</h1>
-    </header>
-    <div>
+
+    <div class="nav-div">
         <nav>
             <ul>
-                <li><a href="mainpage.html">Главная страница</a></li>
-                <li><a href="aboutme.html">Обо мне</a></li>
-                <li><a href="myinterests.html">Мои интересы</a></li>
-                <li><a href="study.html">Учёба</a></li>
-                <li><a href="album.html">Фотоальбом</a></li>
-                <li><a href="test.html">Тест</a></li>
+                <li class="list-option"><a href="mainpage.html">Главная страница</a></li>
+                <li id="submenu-item" class="submenu-par"><a href="myinterests.html">Мои интересы</a>
+                    <ul class="submenu">
+                        <li><a href="myinterests.html#hobby">Хобби</a></li>
+                        <li><a href="myinterests.html#books">Книги</a></li>
+                        <li><a href="myinterests.html#music">Музыка</a></li>
+                        <li><a href="myinterests.html#films">Фильмы</a></li>
+                    </ul>
+                </li>
+                <li class="list-option"><a href="study.html">Учёба</a></li>
+                <li class="list-option"><a href="album.html">Фотоальбом</a></li>
+                <li class="list-option"><a href="aboutme.html">Обо мне</a></li>
+                <li class="list-option"><a href="test.html">Тест</a></li>
             </ul>
         </nav>
     </div>
-    <div class="form">
-        <form method="post" action="mailto:ksenia_krr@mail.ru" name="contactForm" onsubmit="return checkInput()" enctype="text/plain" style="padding-left: 80px;">
-            <label>Фамилия Имя Отчество:
-                <input type="text" name="fio" class="field"><br><br></label>
-            <label>Пол:
-            <input type="radio" name="gender" value="man"> Мужской
-            <input type="radio" name="gender" value="woman"> Женский
-            </label><br><br>
-            <label>Возраст:
-                <select class="field" name="age">
-                    <option value="">Выберите возраст</option>
-                    <option value="0-15">0-15</option>
-                    <option value="16-30">16-30</option>
-                    <option value="31-45">31-45</option>
-                    <option value="46-60">46-60</option>
-                    <option value="60-...">60-...</option>
-                </select><br><br>
-            </label>
-            <label>E-mail:
-                <input type="email" name="email" class="field"><br><br>
-            </label>
-            <label>Телефон:
-                <input type="tel" name="phone" class="field"><br><br>
-            </label>
-            <label>Сообщение:
-                <textarea name="message" rows="4" cols="50" class="field"></textarea><br></label><br>
-            <button class="but" type="submit">Отправить</button>
-            <button class="but" type="reset">Очистить форму</button>
-        </form>
+    <div class="main-body">
+        <header  style="text-align: center">
+            <h1>Контакты</h1>
+        </header>
+        <div class="form">
+            <form method="post" action="mailto:ksenia_krr@mail.ru" name="contactForm" onsubmit="return checkInput()" enctype="text/plain" >
+                <div class="form-div">
+                    <label>Фамилия Имя Отчество:
+                        <input type="text" name="fio" class="field"><br><br></label>
+                    <label>Пол:
+                        <input type="radio" name="gender" value="man"> Мужской
+                        <input type="radio" name="gender" value="woman"> Женский
+                    </label><br><br>
+                    <label>Возраст:
+                        <select class="field" name="age">
+                            <option value="">Выберите возраст</option>
+                            <option value="0-15">0-15</option>
+                            <option value="16-30">16-30</option>
+                            <option value="31-45">31-45</option>
+                            <option value="46-60">46-60</option>
+                            <option value="60-...">60-...</option>
+                        </select><br><br>
+                    </label>
+                    <label>E-mail:
+                        <input type="email" name="email" class="field"><br><br>
+                    </label>
+                    <label>Телефон:
+                        <input type="tel" name="phone" class="field"><br><br>
+                    </label>
+                    <label>Сообщение:
+                        <textarea style="resize: none" name="message" rows="4" cols="53" class="field"></textarea><br></label><br>
+                    <div style="display: flex; justify-content: space-evenly">
+                        <button style="border-radius: 10px;" class="but" type="submit">Отправить</button>
+                        <button style="border-radius: 10px;" class="but" type="reset">Очистить форму</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
     </div>
+    <script src="listUpdater.js"></script>
 </body>
 </html>

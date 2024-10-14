@@ -22,39 +22,57 @@
         img {
             max-height: 250px;
         }
+        ul {
+            width: 100%;
+            font-family: Verdana;
+            font-size: 120%;
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        ul li{
+            margin-left: 50px;
+            background-color: #abc4ff;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            padding: 10px;
+            float: left;
+        }
     </style>
     <script src="album.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Фотоальбом</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="mainpage.html">Главная страница</a></li>
-        </ul>
-    </nav>
-    <div style="margin-top: 50px; margin-right: 50px;">
-        <div class="pBlock">
-            <script>
-                setPhotos(1, 4);
-            </script>
-        </div>
+    <div class="main-body">
+        <header style="margin-bottom: 0px">
+            <h1>Фотоальбом</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="mainpage.html">Главная страница</a></li>
+            </ul>
+        </nav>
+        <div style="margin-top: 50px; margin-right: 50px;">
+            <div class="pBlock">
+                <script>
+                    setPhotos(1, 4);
+                </script>
+            </div>
 
-        <div class="pBlock">
-            <script>
-                setPhotos(5, 4);
-            </script>
-        </div>
-        <div class="pBlock">
-            <script>
-                setPhotos(9, 4);
-            </script>
-        </div>
-        <div class="pBlock">
-            <script>
-                setPhotos(13, 3);
-            </script>
+            <div class="pBlock">
+                <script>
+                    setPhotos(5, 4);
+                </script>
+            </div>
+            <div class="pBlock">
+                <script>
+                    setPhotos(9, 4);
+                </script>
+            </div>
+            <div class="pBlock">
+                <script>
+                    setPhotos(13, 3);
+                </script>
+            </div>
         </div>
     </div>
 </body>

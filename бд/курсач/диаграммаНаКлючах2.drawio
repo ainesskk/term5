@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
   <diagram name="Страница — 1" id="kMK4P9hotfpQ_Spd6qPo">
-    <mxGraphModel dx="890" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1098" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -81,13 +81,13 @@
         <mxCell id="Zv3L8iQLcZKGsGOPM7jH-24" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="13" y="270" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Zv3L8iQLcZKGsGOPM7jH-25" value="Логин пользователя(FK)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="Zv3L8iQLcZKGsGOPM7jH-25" value="Логин пользователя(FK)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="13" y="270" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Zv3L8iQLcZKGsGOPM7jH-27" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="653" y="260" width="140" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="Zv3L8iQLcZKGsGOPM7jH-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=none;startFill=0;" parent="1" source="Zv3L8iQLcZKGsGOPM7jH-29" target="Zv3L8iQLcZKGsGOPM7jH-41" edge="1">
+        <mxCell id="Zv3L8iQLcZKGsGOPM7jH-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=oval;startFill=1;" parent="1" source="Zv3L8iQLcZKGsGOPM7jH-29" target="Zv3L8iQLcZKGsGOPM7jH-41" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="820" y="275" />

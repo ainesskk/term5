@@ -10,13 +10,15 @@ function setHeart(event) {
         const imgPrev = document.createElement('img');
         imgPrev.src = "img/heart.png";
         imgPrev.classList.add('list-img');
+        imgPrev.style.border = "0px";
         imgPrev.style.marginRight = '5px';
         item.prepend(imgPrev);
         const imgNext = document.createElement('img');
-         imgNext.src = "img/heart.png";
-         imgNext.classList.add('list-img');
-         imgNext.style.marginLeft = '5px';
-         item.append(imgNext);
+        imgNext.src = "img/heart.png";
+        imgNext.classList.add('list-img');
+        imgNext.style.border = "0px";
+        imgNext.style.marginLeft = '5px';
+        item.append(imgNext);
     }
 }
 
