@@ -1,40 +1,45 @@
 const listOptions = window.document.querySelectorAll('.list-option');
-const subOption = window.document.querySelector('.submenu-par');
-subOption.addEventListener('mouseover', setHeart);
-subOption.addEventListener('mouseout', removeHeart);
+
 listOptions.forEach(li => {
-    li.addEventListener('mouseover', setHeart);
-    li.addEventListener('mouseout', removeHeart);
+    addImages(li, 'heart', 'list-img');
+    li.addEventListener('mouseover', addCat);
+    li.addEventListener('mouseout', removeCat);
 });
 
-function setHeart(event) {
-    const item = event.currentTarget;
-    if(!item.querySelector('.list-img')){
-        const imgPrev = document.createElement('img');
-        imgPrev.src = "img/heart.png";
-        imgPrev.classList.add('list-img');
-        imgPrev.style.border = "0px";
-        imgPrev.style.marginRight = '5px';
-        imgPrev.style.height = '16,48px';
-        item.prepend(imgPrev);
-        const imgNext = document.createElement('img');
-        imgNext.src = "img/heart.png";
-        imgNext.classList.add('list-img');
-        imgNext.style.border = "0px";
-        imgNext.style.height = '16,48px';
-        imgNext.style.marginLeft = '5px';
-        item.append(imgNext);
+function addImages(place, name, imgClass) {
+    const prev = document.createElement('img');
+    prev.src = `img/${name}.png`;
+    prev.classList.add(imgClass);
+    prev.style.marginRight = '5px';
+
+    const next = document.createElement('img');
+    next.src = `img/${name}.png`;
+    next.classList.add(imgClass);
+    next.style.marginLeft = '5px';
+
+    place.prepend(prev);
+    place.append(next);
+}
+
+function removeImages(place, imgClass) {
+    let images = place.querySelectorAll(imgClass);
+    images.forEach((item) => {
+        place.removeChild(item);
+    });
+}
+
+function addCat(event) {
+    const place = event.currentTarget;
+    removeImages(place, '.list-img');
+    if (!place.querySelector('.cat-list-img')) {
+        addImages(place, 'cat', 'cat-list-img');
     }
 }
 
-function removeHeart(event) {
-    const item = event.currentTarget;
-    const img = item.querySelectorAll('.list-img');
-    if (img) {
-        img.forEach(heart => {
-            item.removeChild(heart);
-        })
-    }
+function removeCat(event) {
+    const place = event.currentTarget;
+    removeImages(place, '.cat-list-img');
+    addImages(place, 'heart', 'list-img');
 }
 
 const submenu = document.getElementById('submenu-item');

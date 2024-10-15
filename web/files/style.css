@@ -15,22 +15,31 @@ header{
     margin-left: 50px;
     margin-top: 50px;
 }
+.list-img, .cat-list-img {
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 17px;
+    border: 0px;
+}
+.list-option{
+    font-family: Verdana;
+    font-size: 100%;
+}
+
 .nav-div{
     background-color: #ccdbfd;
     padding: 20px;
 }
-.list-img{
-    width: 20px;
-    display: inline-block;
-}
+
 .nav-div nav > ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     font-family: Verdana;
     font-size: 120%;
     padding: 0;
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     list-style: none;
 }
 .nav-div nav > ul li {
@@ -147,10 +156,12 @@ button:active{
 }
 
 textarea{
+    caret-color: #49536c;
     resize: none;
 }
 
 input[class="field"], input[class="text"], input[class="field"], select, textarea {
+    caret-color: #49536c;
     border-radius: 10px;
     border: 2px solid white;
     outline: none;
