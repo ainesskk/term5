@@ -1,0 +1,15 @@
+C:\term5\шарп\laba1\laba1\bin\Debug\net8.0\laba1.exe
+C:\term5\шарп\laba1\laba1\bin\Debug\net8.0\laba1.deps.json
+C:\term5\шарп\laba1\laba1\bin\Debug\net8.0\laba1.runtimeconfig.json
+C:\term5\шарп\laba1\laba1\bin\Debug\net8.0\laba1.dll
+C:\term5\шарп\laba1\laba1\bin\Debug\net8.0\laba1.pdb
+C:\term5\шарп\laba1\laba1\obj\Debug\net8.0\laba1.GeneratedMSBuildEditorConfig.editorconfig
+C:\term5\шарп\laba1\laba1\obj\Debug\net8.0\laba1.AssemblyInfoInputs.cache
+C:\term5\шарп\laba1\laba1\obj\Debug\net8.0\laba1.AssemblyInfo.cs
+C:\term5\шарп\laba1\laba1\obj\Debug\net8.0\laba1.csproj.CoreCompileInputs.cache
+C:\term5\шарп\laba1\laba1\obj\Debug\net8.0\laba1.sourcelink.json
+C:\term5\шарп\laba1\laba1\obj\Debug\net8.0\laba1.dll
+C:\term5\шарп\laba1\laba1\obj\Debug\net8.0\refint\laba1.dll
+C:\term5\шарп\laba1\laba1\obj\Debug\net8.0\laba1.pdb
+C:\term5\шарп\laba1\laba1\obj\Debug\net8.0\laba1.genruntimeconfig.cache
+C:\term5\шарп\laba1\laba1\obj\Debug\net8.0\ref\laba1.dll

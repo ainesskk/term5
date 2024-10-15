@@ -79,12 +79,6 @@ a{
     color: #ccdbfd;
 }
 
-/*.submenu-par:hover .submenu {*/
-/*    height: auto;*/
-/*    overflow: visible;*/
-/*    opacity: 1;*/
-/*}*/
-
 footer{
     background-color: #ccdbfd;
     font-size: 120%;
@@ -150,6 +144,10 @@ button:hover{
 }
 button:active{
     border: 2px solid rgba(73, 83, 108, 0.75);
+}
+
+textarea{
+    resize: none;
 }
 
 input[class="field"], input[class="text"], input[class="field"], select, textarea {
