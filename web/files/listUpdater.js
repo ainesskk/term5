@@ -42,9 +42,13 @@ function removeCat(event) {
     addImages(place, 'heart', 'list-img');
 }
 
-const submenu = document.getElementById('submenu-item');
-submenu.addEventListener('mouseover', showMenu);
-submenu.addEventListener('mouseout', hideMenu);
+
+if(document.getElementById('submenu-item')){
+    const submenu = document.getElementById('submenu-item');
+    submenu.addEventListener('mouseover', showMenu);
+    submenu.addEventListener('mouseout', hideMenu);
+}
+
 
 function showMenu(event) {
     const items = document.querySelectorAll('.submenu');
