@@ -13,7 +13,7 @@ h1, h2, h3, p, span , td {
 header{
     color: #49536c;
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .list-img, .cat-list-img {
     width: 20px;
@@ -79,7 +79,6 @@ a {
     padding: 0;
     border-radius: 20px;
     transition: all 0.5s ease-in;
-    z-index: 1;
 }
 
 .submenu li {
@@ -132,7 +131,7 @@ img{
     width: 700px;
     margin-left: auto; 
     margin-right: auto; 
-    margin-top:50px;
+    margin-top:30px;
     padding-top: 50px;
     padding-bottom: 50px;
     font-size: 120%;
@@ -140,10 +139,72 @@ img{
     border-radius: 20px;
 }
 
-.but, .field {
+.but, .field, .scrollbar {
     font-size: 90%;
     color: #49536c;
+    border: 2px solid #edf2fa;
     font-family: Verdana;
+}
+
+button{
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+}
+
+.but:hover{
+    border: 2px solid  #ccdbfd;
+    background-color: #ccdbfd;
+}
+
+.but:active{
+    border: 2px solid rgba(73, 83, 108, 0.75);
+}
+
+.calendar-container{
+    width: 252px;
+    background: rgba(252, 237, 242, 0.93);
+    margin-top: -15px;
+    padding: 5px;
+    border-radius: 10px;
+    position: fixed;
+    z-index:999;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.scrollbar {
+    max-height: 100px;
+    overflow-y: auto;
+}
+.calendar{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+.day-block{
+    color: #49536c;
+    padding:5px;
+    width: 22px;
+    margin: 2px;
+    text-align: center;
+    border-radius: 10px;
+    background: #ffd1d4;
+}
+
+.day-block:hover{
+    background: #ffb7c5;
+}
+
+.calendar-but{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0;
+
+    background: #ffb7c5;
+}
+.calendar-but:hover{
+    background: #ff8fab;
 }
 
 .form-div{
@@ -152,21 +213,6 @@ img{
     width: 80%;
 }
 
-button{
-    border-radius: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    border: 2px solid #edf2fa;
-    outline: none;
-}
-
-button:hover{
-    border: 2px solid  #ccdbfd;
-    background-color: #ccdbfd;
-}
-button:active{
-    border: 2px solid rgba(73, 83, 108, 0.75);
-}
 
 textarea{
     caret-color: #49536c;
