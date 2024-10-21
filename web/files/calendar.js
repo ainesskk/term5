@@ -1,3 +1,6 @@
+let okClicked = false;
+const birthdayField = document.getElementById('birthday');
+
 const monthsArray = [
     "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
     "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
@@ -49,11 +52,15 @@ function outDays(){
 
 outDays();
 
-
 const calendar = document.getElementById("calendar-container");
 
 function showCalendar(){
-    calendar.style.overflow = "visible";
+    birthdayField.addEventListener("blur", function() {
+        if (!okClicked) {
+            birthField.focus();
+        }
+    });
+    calendar.style.display = "block";
     calendar.style.opacity = "1";
 }
 
@@ -70,6 +77,7 @@ function checkDate(element){
 
 const button = document.getElementById("calendar-but");
 button.addEventListener("click", function(){
-    calendar.style.overflow = "hidden";
+    okClicked = true;
+    calendar.style.display = "none";
     calendar.style.opacity = "0";
 })
