@@ -318,17 +318,17 @@ span.error-message{
     display: inline-block;
     width:50%;
 }
-.all-sessions-div{
+.all-session-div{
     text-align: center;
     display: inline-block;
     width:50%;
 }
-.current-session-table-div{
+.current-session-table-div, .all-session-table-div{
     display: flex;
     justify-content: center;
 }
 
-.current-session-table{
+.current-session-table, .all-session-table{
     font-size: 120%;
     padding: 10px;
     border-radius: 10px;
@@ -338,6 +338,7 @@ span.error-message{
     font-family: Verdana;
 }
 
-.current-session-table td, .current-session-table th{
+.current-session-table td, .current-session-table th,
+.all-session-table td, .all-session-table th{
     padding: 5px 10px 5px 10px;
 }

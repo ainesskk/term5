@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <meta charset="UTF-8">
     <title>История просмотра</title>
+
+    <script src="js/viewCounterStorage.js"></script>
 </head>
 <body>
     <div class="nav-div">
@@ -42,48 +44,90 @@
                         </tr>
                         <tr>
                             <td>Главная страница</td>
-                            <td id="main-views"></td>
+                            <td class="td-cur" id="main-views-cur"></td>
                         </tr>
                         <tr>
                             <td>Обо мне</td>
-                            <td id="aboutme-views"></td>
+                            <td class="td-cur" id="aboutme-views-cur"></td>
                         </tr>
                         <tr>
                             <td>Мои интересы</td>
-                            <td id="interests-views"></td>
+                            <td class="td-cur" id="interests-views-cur"></td>
                         </tr>
                         <tr>
                             <td>Фотоальбом</td>
-                            <td id="album-views"></td>
+                            <td class="td-cur" id="album-views-cur"></td>
                         </tr>
                         <tr>
                             <td>Контакт</td>
-                            <td id="contact-views"></td>
+                            <td class="td-cur" id="contact-views-cur"></td>
                         </tr>
                         <tr>
                             <td>Учёба</td>
-                            <td id="study-views"></td>
+                            <td class="td-cur" id="study-views-cur"></td>
                         </tr>
                         <tr>
                             <td>Тест</td>
-                            <td id="test-views"></td>
+                            <td class="td-cur" id="test-views-cur"></td>
                         </tr>
                         <tr>
                             <td>История просмотра</td>
-                            <td id="history-views"></td>
+                            <td class="td-cur" id="history-views-cur"></td>
                         </tr>
                     </table>
                 </div>
             </div>
-            <div class="all-sessions-div">
+            <div class="all-session-div">
                 <h2>История за все время</h2>
-
+                <div class="all-session-table-div">
+                    <table class="all-session-table" id="all-session-table">
+                        <tr>
+                            <th>Название страницы</th>
+                            <th>Количество посещений</th>
+                        </tr>
+                        <tr>
+                            <td>Главная страница</td>
+                            <td class="td-all" id="main-views-all"></td>
+                        </tr>
+                        <tr>
+                            <td>Обо мне</td>
+                            <td class="td-all" id="aboutme-views-all"></td>
+                        </tr>
+                        <tr>
+                            <td>Мои интересы</td>
+                            <td class="td-all" id="interests-views-all"></td>
+                        </tr>
+                        <tr>
+                            <td>Фотоальбом</td>
+                            <td class="td-all" id="album-views-all"></td>
+                        </tr>
+                        <tr>
+                            <td>Контакт</td>
+                            <td class="td-all" id="contact-views-all"></td>
+                        </tr>
+                        <tr>
+                            <td>Учёба</td>
+                            <td class="td-all" id="study-views-all"></td>
+                        </tr>
+                        <tr>
+                            <td>Тест</td>
+                            <td class="td-all" id="test-views-all"></td>
+                        </tr>
+                        <tr>
+                            <td>История просмотра</td>
+                            <td class="td-all" id="history-views-all"></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
+    <script>
 
-    <script src="viewCounter.js"></script>
-    <script src="listUpdater.js"></script>
-    <script src="clockUpdate.js"></script>
+        increaseCounter();
+        updateCounter();
+    </script>
+    <script src="js/listUpdater.js"></script>
+    <script src="js/clockUpdate.js"></script>
 </body>
 </html>
