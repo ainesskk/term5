@@ -107,7 +107,7 @@ function checkPhone(phone) {
 
 function checkInput() {
     let form = document.forms["contactForm"];
-    if (form["fio"].value === "") {
+    if (form["fio"].classList.contains("error")) {
         return false;
     }
     if (!form["gender"].value) {
@@ -116,13 +116,13 @@ function checkInput() {
     if (!form["birthday"].value) {
         return false;
     }
-    if (form["email"].value === "") {
+    if (form["email"].value.contains("error")) {
         return false;
     }
-    if (form["phone"].value === "") {
+    if (form["phone"].value.contains("error")) {
         return false;
     }
-    if (form["message"].value === "") {
+    if (form["message"].value.contains("error")) {
         return false;
     }
     return true;
