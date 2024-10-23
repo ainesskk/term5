@@ -107,25 +107,20 @@ function checkPhone(phone) {
 
 function checkInput() {
     let form = document.forms["contactForm"];
-    if (form["fio"].classList.contains("error")) {
-        return false;
+    if (form["fio"].classList.contains("valid")) {
+        if (form["gender"].value) {
+            if (form["birthday"].value) {
+                if (form["email"].classList.contains("valid")) {
+                    if (form["phone"].classList.contains("valid")) {
+                        if (form["message"].classList.contains("valid")) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
     }
-    if (!form["gender"].value) {
-        return false;
-    }
-    if (!form["birthday"].value) {
-        return false;
-    }
-    if (form["email"].value.contains("error")) {
-        return false;
-    }
-    if (form["phone"].value.contains("error")) {
-        return false;
-    }
-    if (form["message"].value.contains("error")) {
-        return false;
-    }
-    return true;
+    return false;
 }
 
 function checkFio(fio) {
