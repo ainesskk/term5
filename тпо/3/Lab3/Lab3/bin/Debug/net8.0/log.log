@@ -1,0 +1,7 @@
+Input: a Expected: a Actual: a
+Input: ? Expected: & Actual: &
+Input: abcde Expected: abcde Actual: abcde
+Input: ?ab23ef Expected: &ab23ef Actual: &ab23ef
+Input: 1bc?defg Expected: 1bc&defg Actual: 1bc&defg
+Input: 123bcdefg? Expected: 123bcdefg& Actual: 123bcdefg&
+Input: ??ab???c1d??? Expected:  &&ab&&&c1d&&& Actual: &&ab&&&c1d&&&
