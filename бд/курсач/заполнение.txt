@@ -1,0 +1,66 @@
+insert into customer (username, password, full_name, birth_date, email, phone, balance) values
+('user1', 'password1', 'Иван Иванов', '1990-01-01', 'ivan@example.com', '1234567890', 1000.00),
+('user2', 'password2', 'Петр Петров', '1985-05-15', 'petr@example.com', '0987654321', 500.00),
+('user3', 'password3', 'Сергей Сергеев', '1975-03-20', 'sergey@example.com', '1122334455', 200.00),
+('user4', 'password4', 'Алексей Алексеев', '1992-07-18', 'alexey@example.com', '2233445566', 300.00),
+('user5', 'password5', 'Михаил Михайлов', '1988-04-12', 'mikhail@example.com', '3344556677', 150.00),
+('user6', 'password6', 'Андрей Андреев', '1980-02-25', 'andrey@example.com', '4455667788', 600.00),
+('user7', 'password7', 'Анастасия Анастасова', '1995-11-30', 'anastasia@example.com', '5566778899', 800.00),
+('user8', 'password8', 'Екатерина Екатериновна', '1991-09-14', 'ekaterina@example.com', '6677889900', 750.00),
+('user9', 'password9', 'Ольга Ольгина', '1982-06-06', 'olga@example.com', '7788990011', 900.00),
+('user10', 'password10', 'Дмитрий Дмитриев', '1994-12-22', 'dmitriy@example.com', '8899001122', 250.00),
+('user11', 'password11', 'Мария Мариева', '1989-08-19', 'maria@example.com', '9900112233', 450.00),
+('user12', 'password12', 'Кирилл Кириллов', '1981-01-29', 'kirill@example.com', '0011223344', 500.00),
+('user13', 'password13', 'Светлана Светланова', '1978-10-11', 'svetlana@example.com', '1122334455', 300.00),
+('user14', 'password14', 'Василий Васильев', '1993-03-17', 'vasiliy@example.com', '2233445566', 700.00),
+('user15', 'password15', 'Наталья Натальевна', '1987-05-23', 'natalya@example.com', '3344556677', 1000.00);
+
+
+
+insert into team (id, name, country, sport) values
+(uuid_generate_v4(), 'Зенит', 'Россия', 'футбол'),
+(uuid_generate_v4(), 'Спартак', 'Россия', 'футбол'),
+(uuid_generate_v4(), 'ЦСКА', 'Россия', 'футбол'),
+(uuid_generate_v4(), 'Локомотив', 'Россия', 'футбол'),
+(uuid_generate_v4(), 'Динамо', 'Россия', 'футбол'),
+(uuid_generate_v4(), 'Краснодар', 'Россия', 'футбол'),
+(uuid_generate_v4(), 'Ростов', 'Россия', 'футбол'),
+(uuid_generate_v4(), 'Рубин', 'Россия', 'футбол'),
+(uuid_generate_v4(), 'Ахмат', 'Россия', 'футбол'),
+(uuid_generate_v4(), 'Сочи', 'Россия', 'футбол'),
+(uuid_generate_v4(), 'Барселона', 'Испания', 'баскетбол'),
+(uuid_generate_v4(), 'Реал Мадрид', 'Испания', 'баскетбол'),
+(uuid_generate_v4(), 'УНИКС', 'Россия', 'баскетбол'),
+(uuid_generate_v4(), 'Химки', 'Россия', 'баскетбол'),
+(uuid_generate_v4(), 'Зенит БК', 'Россия', 'баскетбол');
+
+
+INSERT INTO event (id, name, date_time, team1_id, team2_id, sport, result, status, margin) VALUES
+(uuid_generate_v4(), 'Футбольный матч 1', '2024-01-10 18:00:00', (SELECT id FROM team WHERE name = 'Спартак'), (SELECT id FROM team WHERE name = 'Локомотив'), 'футбол', NULL, 'scheduled', 0.05),
+(uuid_generate_v4(), 'Футбольный матч 2', '2024-01-11 19:00:00', (SELECT id FROM team WHERE name = 'Ростов'), (SELECT id FROM team WHERE name = 'Динамо'), 'футбол', NULL, 'scheduled', 0.10),
+(uuid_generate_v4(), 'Баскетбольный матч 1', '2024-01-12 20:00:00', (SELECT id FROM team WHERE name = 'Барселона'), (SELECT id FROM team WHERE name = 'УНИКС'), 'баскетбол', NULL, 'scheduled', 0.15),
+(uuid_generate_v4(), 'Теннисный матч 1', '2024-01-13 17:00:00', (SELECT id FROM team WHERE name = 'Зенит БК'), (SELECT id FROM team WHERE name = 'Химки'), 'баскетбол', NULL, 'scheduled', 0.20),
+(uuid_generate_v4(), 'Хоккейный матч 1', '2024-01-14 18:30:00', (SELECT id FROM team WHERE name = 'Барселона'), (SELECT id FROM team WHERE name = 'УНИКС'), 'баскетбол', NULL, 'scheduled', 0.25);
+
+
+INSERT INTO coefficient (id, event_id, type, value) VALUES
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Футбольный матч 1'), 'win_team1', 1.50),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Футбольный матч 1'), 'win_team2', 2.50),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Футбольный матч 1'), 'draw', 3.00),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Футбольный матч 2'), 'win_team1', 1.70),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Футбольный матч 2'), 'win_team2', 2.40),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Футбольный матч 2'), 'draw', 3.20),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Баскетбольный матч 1'), 'win_team1', 1.90),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Баскетбольный матч 1'), 'win_team2', 2.10),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Баскетбольный матч 1'), 'draw', 2.95),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Теннисный матч 1'), 'win_team1', 1.60),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Теннисный матч 1'), 'win_team2', 2.30),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Теннисный матч 1'), 'draw', 3.10),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Хоккейный матч 1'), 'win_team1', 1.80),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Хоккейный матч 1'), 'win_team2', 2.20),
+(uuid_generate_v4(), (SELECT id FROM event WHERE name = 'Хоккейный матч 1'), 'draw', 2.30);
+
+INSERT INTO bet (id, coefficient_id, username, amount, status) VALUES
+(uuid_generate_v4(), (SELECT id FROM coefficient WHERE type = 'win_team1' AND event_id = (SELECT id FROM event WHERE name = 'Футбольный матч 2')), 'user4', 100.00, 'in_progress'),
+(uuid_generate_v4(), (SELECT id FROM coefficient WHERE type = 'win_team2' AND event_id = (SELECT id FROM event WHERE name = 'Футбольный матч 5')), 'user1', 1000.00, 'in_progress'),
+(uuid_generate_v4(), (SELECT id FROM coefficient WHERE type = 'win_team3' AND event_id = (SELECT id FROM event WHERE name = 'Футбольный матч 6')), 'user1', 100.00, 'in_progress');
