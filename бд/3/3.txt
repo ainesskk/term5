@@ -1,0 +1,224 @@
+create sequence discipline_id start 1;
+
+create table discipline (
+    id integer primary key,
+    name varchar(40)
+)
+
+create sequence department_id start 1;
+
+create table department (
+    id integer primary key,
+    name varchar(30),
+    head varchar(30)
+)
+
+create sequence teacher_id start 1;
+
+create table teacher (
+    id integer primary key,
+    fio varchar(30),
+    gender char(1),
+    birth date,
+    department integer references department (id),
+    post varchar(30),
+    academic_title varchar(30),
+    academic_degree varchar(30)
+)
+
+create sequence timetable_id start 1;
+
+create table timetable (
+    id integer primary key,
+    discipline integer references discipline(id) on delete cascade on update cascade,
+    groups varchar(40),
+    lesson_type char(15),
+    teacher integer references teacher (id) on delete cascade on update cascade,
+    weekday char(2),
+    auditorium char(6)
+)
+
+create table teacher_archive (
+    id integer primary key,
+    fio varchar(30),
+    gender char(1),
+    birth date,
+    department integer,
+    post varchar(30),
+    academic_title varchar(30),
+    academic_degree varchar(30),
+    edit_date date,
+    edit_user varchar(30)
+)
+
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Инженерная графика');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Теория механизмов и машин');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Материаловедение');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Электротехника');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Термодинамика');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Гидравлика');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Сопротивление материалов');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Автоматизация производственных процессов');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Мехатроника');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Металлообработка');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Программирование');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Компьютерные сети');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Системы управления');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Оптика');
+INSERT INTO discipline (id, name) VALUES (nextval('discipline_id'), 'Нанотехнологии');
+
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра информатики', 'Иванов И.И.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра математики', 'Петров П.П.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра физики', 'Сидоров С.С.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра химии', 'Андреев А.А.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра биологии', 'Кузнецов К.К.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра экономики', 'Морозов М.М.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра социологии', 'Новиков Н.Н.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра психологии', 'Федоров Ф.Ф.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра философии', 'Васильев В.В.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра истории', 'Григорьев Г.Г.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра искусств', 'Дмитриев Д.Д.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра географии', 'Жуков Ж.Ж.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра литературы', 'Ильин И.И.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра инженерии', 'Королев К.К.');
+INSERT INTO department (id, name, head) VALUES (nextval('department_id'), 'Кафедра механики', 'Лебедев Л.Л.');
+
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Иванов Иван Иванович', 'M', '1975-05-21', 1, 'Профессор', 'Доктор наук', 'Физико-математические науки');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Петров Петр Петрович', 'M', '1980-03-15', 2, 'Доцент', 'Кандидат наук', 'Химические науки');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Сидорова Анна Сергеевна', 'F', '1982-11-02', 3, 'Ассистент', 'Магистр', 'Биологические науки');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Кузнецов Николай Алексеевич', 'M', '1970-08-19', 4, 'Старший преподаватель', 'Кандидат наук', 'Экономические науки');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Андреева Марина Ивановна', 'F', '1978-12-23', 5, 'Доцент', 'Кандидат наук', 'Юридические науки');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Морозова Елена Викторовна', 'F', '1985-06-11', 6, 'Ассистент', 'Магистр', 'Социологические науки');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Новиков Сергей Дмитриевич', 'M', '1977-04-28', 7, 'Профессор', 'Доктор наук', 'Психологические науки');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Федорова Анна Петровна', 'F', '1983-09-14', 8, 'Старший преподаватель', 'Кандидат наук', 'Философские науки');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Васильев Андрей Николаевич', 'M', '1981-02-17', 9, 'Доцент', 'Кандидат наук', 'Исторические науки');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Григорьева Елена Алексеевна', 'F', '1987-07-08', 10, 'Ассистент', 'Магистр', 'Искусствоведение');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Дмитриев Алексей Сергеевич', 'M', '1979-01-05', 11, 'Старший преподаватель', 'Кандидат наук', 'Географические науки');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Жуков Николай Иванович', 'M', '1984-11-19', 12, 'Доцент', 'Кандидат наук', 'Литературоведение');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Ильина Мария Сергеевна', 'F', '1982-03-21', 13, 'Ассистент', 'Магистр', 'Инженерные науки');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Королев Владимир Алексеевич', 'M', '1976-10-14', 14, 'Профессор', 'Доктор наук', 'Механика');
+INSERT INTO teacher VALUES (nextval('teacher_id'), 'Лебедева Татьяна Ивановна', 'F', '1980-05-06', 15, 'Доцент', 'Кандидат наук', 'Компьютерные науки');
+
+INSERT INTO timetable VALUES (nextval('timetable_id'), 1, '101', 'Лекция', 1, 'пн', '101');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 2, '102', 'Семинар', 2, 'вт', '202');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 3, '103', 'Лабораторная', 3, 'ср', '303');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 4, '104', 'Лекция', 4, 'чт', '404');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 5, '105', 'Семинар', 5, 'пт', '505');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 6, '106', 'Лабораторная', 6, 'сб', '606');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 7, '107', 'Лекция', 7, 'пн', '107');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 8, '108', 'Семинар', 8, 'вт', '208');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 9, '109', 'Лабораторная', 9, 'ср', '309');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 10, '110', 'Лекция', 10, 'чт', '410');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 11, '111', 'Семинар', 11, 'пт', '511');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 12, '112', 'Лабораторная', 12, 'сб', '612');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 13, '113', 'Лекция', 13, 'пн', '102');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 14, '114', 'Семинар', 14, 'вт', '203');
+INSERT INTO timetable VALUES (nextval('timetable_id'), 15, '115', 'Лабораторная', 15, 'ср', '304');
+
+CREATE OR REPLACE FUNCTION end_of_lesson(start_time TIME, lesson_type VARCHAR)
+    RETURNS TIME
+     LANGUAGE plpgsql
+    AS
+$$
+BEGIN
+    IF lesson_type = 'Лекция' OR lesson_type = 'Семинар' THEN
+        RETURN start_time + INTERVAL '1 hour 20 minutes';
+    ELSIF lesson_type = 'Лабораторная' THEN
+        RETURN start_time + INTERVAL '1 hour 30 minutes';
+    ELSE
+        RETURN NULL;
+    END IF;
+END;
+$$;
+
+create table report (
+    fio varchar(30),
+    weekday char(2),
+    total_lessons integer,
+    first_lesson_start time,
+    next_lesson_start time
+);
+
+create function make_report() returns void
+    language plpgsql
+as
+$$
+declare
+    rec record;
+    lessons integer;
+    first_lesson_end time;
+    next_lesson_end time;
+begin
+    
+    for rec in (
+        select tch.fio, t1.teacher, t1.weekday, t1.lesson_type as first_lesson_type,
+               t1.lesson_time as first_lesson, t2.lesson_type as next_lesson_type, t2.lesson_time as next_lesson
+        from timetable t1
+        left join timetable t2 on t1.teacher = t2.teacher and t1.weekday = t2.weekday and t1.lesson_time < t2.lesson_time
+        join teacher tch on tch.id = t1.teacher
+        where not exists (
+            select 1 from timetable t3
+            where t3.teacher = t1.teacher and t3.weekday = t1.weekday and t3.lesson_time > t1.lesson_time and t3.lesson_time < t2.lesson_time
+        )
+        order by t1.teacher, t1.lesson_time
+    ) loop
+        select count(*) into lessons
+        from timetable
+        where teacher = rec.teacher and weekday = rec.weekday;
+
+        first_lesson_end := end_of_lesson(rec.first_lesson, rec.first_lesson_type);
+        next_lesson_end := end_of_lesson(rec.next_lesson, rec.next_lesson_type);
+
+        if lessons > 4 
+        or (first_lesson_end is not null and rec.next_lesson is not null and first_lesson_end > rec.next_lesson) then
+            insert into report (fio, weekday, total_lessons, first_lesson_start, next_lesson_start)
+            values (rec.fio, rec.weekday, lessons, rec.first_lesson, rec.next_lesson);
+        else
+            insert into report (fio, weekday, total_lessons, first_lesson_start, next_lesson_start)
+            values (rec.fio, rec.weekday, null, null, null);
+        end if;
+    end loop;
+end;
+$$;
+
+alter function make_report() owner to postgres;
+
+create or replace function timetable_trigger_fnc()
+returns trigger as
+$$
+declare
+    end_time time;
+begin
+    if not ((new.lessdon_type = 'Лекция') or (new.lessdon_type = 'Семинар')
+            or (new.lessdon_type = 'Лабораторная')) then
+        raise exception 'not allowable lesson type';
+    end if;
+    if (new.lessdon_type not in ('пн', 'вт', 'ср', 'чт', 'пт', 'сб')) then
+        raise exception 'not allowable weekday type';
+    end if;
+    if (new.auditorium not like '???') then
+        raise exception 'not allowable auditorium value';
+    end if;
+    end_time = end_of_lesson(new.lesson_time, new.lesson_type);
+    if (new.lesson_time < '9:00' or end_time > '21:00') then
+        raise exception 'not allowable lesson time';
+    end if;
+    return new;
+end
+$$
+language plpgsql;
+
+create trigger timetable_insert_trigger
+    before insert
+    on timetable
+    for each row
+    execute procedure timetable_trigger_fnc();
+
+create or replace function archive_teachers_fnc()
+returns trigger as
+$$
+begin
+    insert into teacher_archive values (new.id, new.fio, new.gender, new.birth, new.department, new.post, new.academic_title, new.academic_degree, current_date, current_user);
+end
+$$
+language plpgsql;
