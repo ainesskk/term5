@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Так себе сайт Донца Николая. Контакт</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/validateForm.js"></script>
+</head>
+<body>
+<nav class="main-menu">
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="autobiography.html">Обо мне</a></li>
+        <li><a href="interests.html">Мои интересы</a></li>
+        <li><a href="study.html">Учёба</a></li>
+        <li><a href="album.html">Фотоальбом</a></li>
+        <li><a href="contact.html" class="selected">Контакт</a></li>
+        <li><a href="test.html">Тест</a></li>
+    </ul>
+</nav>
+<div class="content">
+    <div class="container">
+        <form action="mailto:k_dod1@mail.ru" method="post" onsubmit="return validateForm()">
+            <label>
+                <input name="fio" placeholder="ФИО" class="input-string" required/>
+            </label>
+            <br>
+            <label class="input-desc">Мужской
+                <input type="radio" name="gender" value="male" required>
+            </label>
+            <label class="input-desc">Женский
+                <input type="radio" name="gender" value="female" required>
+            </label>
+            <br>
+            <label class="input-desc">Возраст
+                <select name="age" size="1" required>
+                    <option value="" selected>Не выбран</option>
+                    <option value="small">Большой</option>
+                    <option value="big">Маленький</option>
+                </select>
+            </label>
+            <br>
+            <label>
+                <input name="email" placeholder="Почта" class="input-string" type="email" required>
+            </label>
+            <label>
+                <input name="phone" placeholder="Телефон" class="input-string" type="tel" required>
+            </label>
+            <br>
+            <button type="submit" class="submit-button">Отправить</button>
+        </form>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <p class="lr">Лабораторная работа №1</p>
+        <q class="lr"><i>Исследование возможностей языка разметки гипертекстов HTML и каскадных таблиц стилей CSS</i></q>
+    </div>
+</footer>
+</body>
+</html>
