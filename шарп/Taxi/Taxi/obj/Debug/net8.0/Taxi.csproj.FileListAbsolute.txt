@@ -1,0 +1,15 @@
+C:\term5\шарп\Taxi\Taxi\bin\Debug\net8.0\Taxi.exe
+C:\term5\шарп\Taxi\Taxi\bin\Debug\net8.0\Taxi.deps.json
+C:\term5\шарп\Taxi\Taxi\bin\Debug\net8.0\Taxi.runtimeconfig.json
+C:\term5\шарп\Taxi\Taxi\bin\Debug\net8.0\Taxi.dll
+C:\term5\шарп\Taxi\Taxi\bin\Debug\net8.0\Taxi.pdb
+C:\term5\шарп\Taxi\Taxi\obj\Debug\net8.0\Taxi.GeneratedMSBuildEditorConfig.editorconfig
+C:\term5\шарп\Taxi\Taxi\obj\Debug\net8.0\Taxi.AssemblyInfoInputs.cache
+C:\term5\шарп\Taxi\Taxi\obj\Debug\net8.0\Taxi.AssemblyInfo.cs
+C:\term5\шарп\Taxi\Taxi\obj\Debug\net8.0\Taxi.csproj.CoreCompileInputs.cache
+C:\term5\шарп\Taxi\Taxi\obj\Debug\net8.0\Taxi.sourcelink.json
+C:\term5\шарп\Taxi\Taxi\obj\Debug\net8.0\Taxi.dll
+C:\term5\шарп\Taxi\Taxi\obj\Debug\net8.0\refint\Taxi.dll
+C:\term5\шарп\Taxi\Taxi\obj\Debug\net8.0\Taxi.pdb
+C:\term5\шарп\Taxi\Taxi\obj\Debug\net8.0\Taxi.genruntimeconfig.cache
+C:\term5\шарп\Taxi\Taxi\obj\Debug\net8.0\ref\Taxi.dll
