@@ -22,11 +22,11 @@ public class TestDriver: Tester
             LogMessage("Input: " + tests[i] + " Expected: " + testsExpected[i] + " Actual: " + example.ChangeSymbols(tests[i]));
         }
     }
-    static void Main()
-    {
-        TestDriver stringTester = new TestDriver();
-        stringTester.ChangeStringTester();
-        Log.Close();
-    }
+    // static void Main()
+    // {
+    //     TestDriver stringTester = new TestDriver();
+    //     stringTester.ChangeStringTester();
+    //     Log.Close();
+    // }
 
 }
