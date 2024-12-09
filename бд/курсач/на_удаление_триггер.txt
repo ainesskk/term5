@@ -1,0 +1,134 @@
+create function recalculate_coefficients_on_delete() returns trigger
+    language plpgsql
+as
+$$
+declare
+    total_amount_team1 decimal(10, 2) := 0;
+    total_amount_team2 decimal(10, 2) := 0;
+    total_amount_draw decimal(10, 2) := 0;
+    coeff_id uuid;
+    v_event_id uuid;
+    event_margin decimal(5, 2);
+    probability_team1 decimal(5, 2) := 0;
+    probability_team2 decimal(5, 2) := 0;
+    probability_draw decimal(5, 2) := 0;
+    new_value_team1 decimal(5, 2);
+    new_value_team2 decimal(5, 2);
+    new_value_draw decimal(5, 2);
+    total_amount decimal(10, 2);
+begin
+
+    if old.status != 'in_progress' then
+        raise exception 'bet status is not in_progress';
+    else
+        insert into transaction
+        values (uuid_generate_v4(), old.username, CURRENT_TIMESTAMP, old.amount, 'deposit');
+    end if;
+
+    raise notice 'Deleting bet with id %', old.id;
+
+    if old.coefficient_id is null then
+        raise notice 'coefficient id is null';
+        return old;
+    end if;
+
+    coeff_id := old.coefficient_id;
+
+    select coefficient.event_id into v_event_id from coefficient where coefficient.id = coeff_id;
+    raise notice 'Event ID %', v_event_id;
+
+    select event.margin into event_margin
+    from event
+    where event.id = v_event_id;
+    raise notice 'Event Margin %', event_margin;
+
+    select coalesce(sum(amount), 0) into total_amount_team1
+    from bet
+    where bet.coefficient_id in (
+        select coefficient.id
+        from coefficient
+        where coefficient.event_id = v_event_id
+        and coefficient.type = 'win_team1'
+    );
+    raise notice 'Total Amount Team1 %', total_amount_team1;
+
+    select coalesce(sum(amount), 0) into total_amount_team2
+    from bet
+    where bet.coefficient_id in (
+        select coefficient.id
+        from coefficient
+        where coefficient.event_id = v_event_id
+        and coefficient.type = 'win_team2'
+    );
+    raise notice 'Total Amount Team2 %', total_amount_team2;
+
+    select coalesce(sum(amount), 0) into total_amount_draw
+    from bet
+    where bet.coefficient_id in (
+        select coefficient.id
+        from coefficient
+        where coefficient.event_id = v_event_id
+        and coefficient.type = 'draw'
+    );
+    raise notice 'Total Amount Draw %', total_amount_draw;
+
+    total_amount := total_amount_team1 + total_amount_team2 + total_amount_draw;
+    raise notice 'Total Amount %', total_amount;
+
+    if total_amount > 0 then
+        probability_team1 := total_amount_team1::decimal / total_amount;
+        probability_team2 := total_amount_team2::decimal / total_amount;
+        probability_draw := total_amount_draw::decimal / total_amount;
+        raise notice 'Probabilities - Team1: %, Team2: %, Draw: %', probability_team1, probability_team2, probability_draw;
+    end if;
+
+    if total_amount_team1 = 0 then
+        new_value_team1 := 10.00;
+    else
+        new_value_team1 := 1 / (probability_team1 * (1 + event_margin));
+    end if;
+    raise notice 'New value team1 %', new_value_team1;
+
+    if total_amount_team2 = 0 then
+        new_value_team2 := 10.00;
+    else
+        new_value_team2 := 1 / (probability_team2 * (1 + event_margin));
+    end if;
+    raise notice 'New value team2 %', new_value_team2;
+
+    if total_amount_draw = 0 then
+        new_value_draw := 10.00;
+    else
+        new_value_draw := 1 / (probability_draw * (1 + event_margin));
+    end if;
+    raise notice 'New value draw %', new_value_draw;
+
+    if total_amount_team1 = 0 and total_amount_team2 = 0 and total_amount_draw = 0 then
+        new_value_team1 := 1.00;
+        new_value_team2 := 1.00;
+        new_value_draw := 1.00;
+    end if;
+
+    raise notice 'New values - Team1: %, Team2: %, Draw: %', new_value_team1, new_value_team2, new_value_draw;
+
+    update coefficient set value = new_value_team1 where coefficient.event_id = v_event_id and coefficient.type = 'win_team1';
+    raise notice 'Updated coefficient for team1';
+
+    update coefficient set value = new_value_team2 where coefficient.event_id = v_event_id and coefficient.type = 'win_team2';
+    raise notice 'Updated coefficient for team2';
+
+    update coefficient set value = new_value_draw where coefficient.event_id = v_event_id and coefficient.type = 'draw';
+    raise notice 'Updated coefficient for draw';
+
+    return old;
+end;
+$$;
+
+
+
+
+create trigger recalculate_event_coefficients_on_delete
+    after delete
+    on bet
+    for each row
+execute procedure recalculate_coefficients_on_delete();

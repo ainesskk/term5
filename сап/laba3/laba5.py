@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 a = 0
 b = 2
 
-trial_counts = [100, 500, 1000, 5000, 10000]
+trial_counts = [100, 500, 1000, 5000, 10000, 100000, 1000000, 10000000]
 errors = []
 
 def f(x):
