@@ -8,40 +8,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30dd3410-28f5-4fcd-b406-32d0b288c695" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../бд/курсач/~$_Крюкова_ИС1_22_о.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../бд/курсач/~$_Крюкова_ИС1_22_о.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Taxi/Taxi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../бд/курсач/~$RSOVAYa.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../бд/курсач/УД_Крюкова_ИС1_22_о.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../бд/курсач/УД_Крюкова_ИС1_22_о.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../laba1/laba1/obj/Debug/net8.0/laba1.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../laba1/laba1/obj/Debug/net8.0/laba1.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../laba1/laba1/obj/Debug/net8.0/laba1.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../laba1/laba1/obj/Debug/net8.0/laba1.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../тпо/3/Lab3/Lab3/obj/Debug/net8.0/Lab3.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../тпо/3/Lab3/Lab3/obj/Debug/net8.0/Lab3.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../тпо/3/Lab3/Lab3/obj/Debug/net8.0/Lab3.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../тпо/3/Lab3/Lab3/obj/Debug/net8.0/Lab3.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../тпо/3/Lab3/TestLab3/obj/Debug/net8.0/TestLab3.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../тпо/3/Lab3/TestLab3/obj/Debug/net8.0/TestLab3.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../тпо/3/Lab3/TestLab3/obj/Debug/net8.0/TestLab3.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../тпо/3/Lab3/TestLab3/obj/Debug/net8.0/TestLab3.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi/bin/Debug/net8.0/Taxi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi/bin/Debug/net8.0/Taxi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi/bin/Debug/net8.0/Taxi.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi/bin/Debug/net8.0/Taxi.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi/bin/Debug/net8.0/Taxi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi/bin/Debug/net8.0/Taxi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/Taxi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/Taxi.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/Taxi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/Taxi.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/Taxi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/Taxi.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/Taxi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/Taxi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/Taxi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/Taxi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/Taxi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/Taxi.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/ref/Taxi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/ref/Taxi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/refint/Taxi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi/obj/Debug/net8.0/refint/Taxi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Л_Р№3_Крюкова_ИС1_22_о.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Л_Р№3_Крюкова_ИС1_22_о.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2pLEDLiEp9nqRhOyDNrI6RM5f0T" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.Taxi.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.Taxi.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Taxi" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -71,6 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732536835061</updated>
       <workItem from="1732536836087" duration="3284000" />
+      <workItem from="1733809078029" duration="7242000" />
     </task>
     <servers />
   </component>
