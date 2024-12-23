@@ -1,0 +1,15 @@
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.exe
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.deps.json
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.runtimeconfig.json
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.dll
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.pdb
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.AssemblyInfoInputs.cache
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.AssemblyInfo.cs
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.sourcelink.json
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.dll
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\refint\ConsoleApp1.dll
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.pdb
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.genruntimeconfig.cache
+C:\term5\шарп\5\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ref\ConsoleApp1.dll

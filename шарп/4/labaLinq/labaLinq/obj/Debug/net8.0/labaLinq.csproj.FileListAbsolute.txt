@@ -1,0 +1,15 @@
+C:\term5\шарп\4\labaLinq\labaLinq\bin\Debug\net8.0\labaLinq.exe
+C:\term5\шарп\4\labaLinq\labaLinq\bin\Debug\net8.0\labaLinq.deps.json
+C:\term5\шарп\4\labaLinq\labaLinq\bin\Debug\net8.0\labaLinq.runtimeconfig.json
+C:\term5\шарп\4\labaLinq\labaLinq\bin\Debug\net8.0\labaLinq.dll
+C:\term5\шарп\4\labaLinq\labaLinq\bin\Debug\net8.0\labaLinq.pdb
+C:\term5\шарп\4\labaLinq\labaLinq\obj\Debug\net8.0\labaLinq.GeneratedMSBuildEditorConfig.editorconfig
+C:\term5\шарп\4\labaLinq\labaLinq\obj\Debug\net8.0\labaLinq.AssemblyInfoInputs.cache
+C:\term5\шарп\4\labaLinq\labaLinq\obj\Debug\net8.0\labaLinq.AssemblyInfo.cs
+C:\term5\шарп\4\labaLinq\labaLinq\obj\Debug\net8.0\labaLinq.csproj.CoreCompileInputs.cache
+C:\term5\шарп\4\labaLinq\labaLinq\obj\Debug\net8.0\labaLinq.sourcelink.json
+C:\term5\шарп\4\labaLinq\labaLinq\obj\Debug\net8.0\labaLinq.dll
+C:\term5\шарп\4\labaLinq\labaLinq\obj\Debug\net8.0\refint\labaLinq.dll
+C:\term5\шарп\4\labaLinq\labaLinq\obj\Debug\net8.0\labaLinq.pdb
+C:\term5\шарп\4\labaLinq\labaLinq\obj\Debug\net8.0\labaLinq.genruntimeconfig.cache
+C:\term5\шарп\4\labaLinq\labaLinq\obj\Debug\net8.0\ref\labaLinq.dll
