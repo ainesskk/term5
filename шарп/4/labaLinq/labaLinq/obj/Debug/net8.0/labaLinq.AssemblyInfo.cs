@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("labaLinq")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5a6a5f31f7179b24dfef18151b128fb9f5c6eb0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+316c2ada50c8ef6b710c587c17398a00551901b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("labaLinq")]
 [assembly: System.Reflection.AssemblyTitleAttribute("labaLinq")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
